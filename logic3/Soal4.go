@@ -1,38 +1,22 @@
 package logic3
 
-//fix
-
 import go_print_slice "github.com/Yape0/go-print-slice"
-
-func TigaEmpatGagal(n int) [][]int {
-	result := go_print_slice.CreateSlice(n)
-	start := 1
-
-	for i := 0; i < n; i++ {
-		for j := 0; j < n; j++ {
-			if i+j >= n-1 {
-				if i%2 == 0 {
-					result[i][j] = start
-				} else {
-					result[i][i-j] = start
-				}
-				start += 2
-			}
-		}
-	}
-	return result
-}
 
 func TigaEmpat(n int) [][]int {
 	result := go_print_slice.CreateSlice(n)
 	start := 1
 	for i := 0; i < n; i++ {
+		geser := 0
 		for j := 0; j < n; j++ {
 			if i+j >= n-1 {
-				if i%2 == 0 {
-					result[i][n-1-j] = start
-				} else {
+				if i%2 == 1 {
 					result[i][j] = start
+				} else {
+					//seharusnya 0.8
+					//seharusnya yang diisi 6,7,8
+					result[i][n-1-geser] = start
+					//result[i][j] = start
+					geser++
 
 				}
 				start += 2
@@ -41,8 +25,3 @@ func TigaEmpat(n int) [][]int {
 	}
 	return result
 }
-
-//result[b][k] = start
-//result[b][n-1-k] = start
-//result[n-1-b][k] = start
-//result[n-1-b][n-1-k] = start
