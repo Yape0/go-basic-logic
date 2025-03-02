@@ -2,7 +2,6 @@ package logic3
 
 import go_print_slice "github.com/Yape0/go-print-slice"
 
-// fix
 func TigaEmpatbelas(n int) [][]int {
 	result := go_print_slice.CreateSlice(n)
 	start := 1
