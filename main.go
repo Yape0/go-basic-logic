@@ -28,6 +28,6 @@ func main() {
 	//go_print_slice.PrintSlice2(DuaEnam(9))
 	//go_print_slice.PrintSlice2(DuaEmpat(9)) //masih perlu adjustment
 	//go_print_slice.PrintSlice2(TigaTujuh(9))
-	utils.PrintSlice2(logic3.TigaEmpatbelas(9))
+	utils.PrintSlice2(logic3.TigaSebelas(9))
 
 }
